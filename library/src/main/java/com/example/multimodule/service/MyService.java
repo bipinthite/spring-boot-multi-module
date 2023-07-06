@@ -3,8 +3,9 @@ package com.example.multimodule.service;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.stereotype.Service;
 
-@Service
 @EnableConfigurationProperties(ServiceProperties.class)
+@Service
+@SuppressWarnings("PMD.BeanMembersShouldSerialize")
 public class MyService {
 
 	private final ServiceProperties serviceProperties;

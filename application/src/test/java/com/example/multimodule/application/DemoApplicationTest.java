@@ -10,6 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import com.example.multimodule.service.MyService;
 
 @SpringBootTest
+@SuppressWarnings("PMD.BeanMembersShouldSerialize")
 public class DemoApplicationTest {
 
 	@Autowired
