@@ -1,0 +1,11 @@
+plugins {
+  id 'com.github.spotbugs'
+}
+
+spotbugs {
+  ignoreFailures = false
+  showStackTraces = true
+  showProgress = true
+  effort = 'default'
+  reportLevel = 'default'
+}

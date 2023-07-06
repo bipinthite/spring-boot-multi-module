@@ -2,6 +2,7 @@ plugins {
   id 'java'
   id 'example.checkstyle'
   id 'example.pmd'
+  id 'example.spotbugs'
 }
 
 sourceCompatibility = '17'
