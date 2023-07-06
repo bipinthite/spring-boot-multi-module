@@ -1,16 +1,11 @@
 plugins {
   id 'java'
-  id 'checkstyle'
-  id 'pmd'
+  id 'example.checkstyle'
+  id 'example.pmd'
 }
 
 sourceCompatibility = '17'
 targetCompatibility = '17'
-
-ext {
-  set('checkstyleVersion', '8.41.1')
-  set('pmdVersion', '6.21.0')
-}
 
 repositories {
   mavenCentral()
@@ -31,15 +26,8 @@ dependencies {
   testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.3'
   testImplementation 'org.mockito:mockito-junit-jupiter:5.3.1'
   testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
-
-  checkstyleConfig("com.puppycrawl.tools:checkstyle:${checkstyleVersion}") { transitive = false }
 }
 
 test {
   useJUnitPlatform()
-}
-
-checkstyle {
-  toolVersion "${checkstyleVersion}"
-  config = resources.text.fromArchiveEntry(configurations.checkstyleConfig, 'google_checks.xml')
 }

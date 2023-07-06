@@ -1,0 +1,14 @@
+plugins {
+  id 'pmd'
+}
+
+ext {
+  set('pmdVersion', '6.21.0')
+}
+
+pmd {
+  consoleOutput = true
+  toolVersion = "${pmdVersion}"
+  rulesMinimumPriority = 5
+  ruleSets = ["category/java/errorprone.xml", "category/java/bestpractices.xml", "category/java/performance.xml"]
+}
